@@ -2,20 +2,23 @@
 <html>
 <head>
 	<title>Starzilla</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="icon" type="imagem/png" href="imagens/iconStarzilla.png">
-	<meta charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="javascript/script.js"></script>
 </head>
-<body>
+<body> 
 	<!-- Menu -->
 	<div id="menu" class="container centralizar">
-		<div class="item"><a href="#">Início</a></div>
-		<div class="item"><a href="#">RoboCup</a></div>
-		<div class="item"><a href="#">Etapas</a></div>
-		<div class="logo"><a href="#"><img src="imagens/logoStarzilla.png" alt="Starzilla"></a></div>
-		<div class="item"><a href="#">Galeria</a></div>
-		<div class="item"><a href="#">Game</a></div>
-		<div class="item"><a href="#">Time</a></div>
+		<div class="item"><a href="index.html">Início</a></div>
+		<div class="item"><a href="#robocup">RoboCup</a></div>
+		<div class="item"><a href="#etapas">Etapas</a></div>
+		<div class="logo"><a href="index.html"><img src="imagens/logoStarzilla.png" alt="Starzilla"></a></div>
+		<div class="item"><a href="#galeria">Galeria</a></div>
+		<div class="item"><a href="#jogo">Game</a></div>
+		<div class="item"><a href="#time">Time</a></div>
 	</div>
 	<!-- Destaque -->
 	<div id="destaque" class="container centralizar coluna">
@@ -25,25 +28,64 @@
 		</div>
 	</div>
 	<!-- RoboCup -->
-	<div id="robocup" class="container centralizar wrap">
-		<div class="container texto coluna">
+	<div id="robocup" class="container centralizar">
+		<div class="container textoRobo coluna">
 			<img src="imagens/logoRoboCup.png" alt="RoboCup" title="RoboCup"/>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra, nibh vel mattis lobortis, nunc dui convallis ipsum, accumsan cursus tellus sapien eget turpis.</p>
 			<p>Praesent eu mi viverra, aliquam mauris eget, tincidunt lorem. Ut accumsan, est nec vestibulum lobortis,  </p>
 			<p>Veja mais em: <a href="https://bit.ly/2vCV0In">https://bit.ly/2vCV0In</a></p>
 		</div>
 		<div class="video">
-			<iframe src="https://www.youtube.com/embed/fKmZ7e1Ptvw" width="540px" height="295px" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/fKmZ7e1Ptvw" width="540px" height="295px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 	</div>
 	<!-- Etapas -->
-	<div id="etapas"></div>
+	<div id="etapas" class="container centralizar">
+		ETAPAS
+	</div>
 	<!-- Galeria -->
-	<div id="galeria"></div>
+	<div id="galeria">
+		<div id="carousel">
+			<div class="show" style="background-image:url(http://www.lirent.net/wp-content/uploads/2014/10/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png)"></div>
+			<div style="background-image:url(http://www.lirent.net/wp-content/uploads/2014/10/Android-Lollipop-wallpapers-Wall1.png)"></div>
+			<div style="background-image:url(https://lh4.googleusercontent.com/-c2kWlW-DE9A/VMSgQjCdffI/AAAAAAAADy4/tB__iZ25nxQ/w1080-h600/atardecer8.png)"></div>
+			<div style="background-image:url(http://papers.co/wallpaper/papers.co-ag01-toronto-material-design-illust-art-25-wallpaper.jpg)"></div>
+	
+			<i id="left" class="glyphicon-left" style="z-index:2; position:absolute;"></i>
+			<i id="right" class="glyphicon-right" style="z-index:2; position:absolute;"></i>
+	
+			<ul>
+					<li class="showli"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+			</ul>
+			</div>
+	</div>
 	<!-- Jogo -->
-	<div id="jogo"></div>
+	<div id="jogo" class="container coluna">
+		<div class="titulo centralizar">GAME</div>
+		<div class="container texto">
+			<div class="container coluna centralizar" style="height: 50vh;">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra, nibh vel mattis lobortis, nunc dui convallis ipsum, accumsan cursus tellus sapien eget turpis.</p>
+				<p>Praesent eu mi viverra, aliquam mauris eget, tincidunt lorem. Ut accumsan, est nec vestibulum lobortis.</p>
+				<a href="#" target="_blank"><input type="button" name="jogar" value="QUERO JOGAR !" class="botaoGame"></a>
+			</div>
+			<div><img src="imagens/game.jpg" alt="game" title="Game"></div>
+		</div>
+	</div>
 	<!-- Time -->
-	<div id="time"></div>
+	<div id="time" class="container coluna">
+		<div class="titulo centralizar">TIME</div>
+		<div class="container textoTime">
+			<div class="foto"><img src="imagens/goku.png" alt="game" title="Game"></div>
+			<div class="container coluna descricao">
+				<h1>GOKU</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed viverra mauris, a rhoncus eros. Praesent facilisis placerat mi quis semper. Nullam aliquam iaculis imperdiet.</p>
+			</div>
+			
+		</div>
+	</div>
 	<!-- Rodapé -->
 	<div id="rodape" class="container centralizar">&copy; 2018 Ohana - Todos os direitos reservados </div>
 </body>
