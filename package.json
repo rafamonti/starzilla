@@ -1,0 +1,11 @@
+{
+  "name": "Starzilla Project Website",
+  "version": "1.0.0",
+  "description": "Static website loader",
+  "scripts": {
+    "start": "harp server --port $PORT"
+  },
+  "dependencies": {
+    "harp": "*"
+  }
+}
