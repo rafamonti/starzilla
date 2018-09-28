@@ -329,7 +329,7 @@ body {
 		display:inline-block;
 		-webkit-font-smoothing:antialiased;
 	
-		background-image: url("imagens/setaBrancaEsq.png");
+		background-image: url(/imagens/setaBrancaEsq.png);
 		background-repeat: no-repeat;
 		width: 30px;
 		height: 55px;
@@ -342,7 +342,7 @@ body {
 			display:inline-block;
 			-webkit-font-smoothing:antialiased;
 		
-			background-image: url("imagens/setaBrancaDir.png");
+			background-image: url(/imagens/setaBrancaDir.png);
 			background-repeat: no-repeat;
 			width: 30px;
 			height: 55px;
