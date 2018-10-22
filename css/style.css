@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 
 *{
 	margin: 0 auto;
@@ -9,118 +8,352 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	color: #912c36;
+	color: #ff1864;
 }
 
-#menu {
-	height: 12vh;
+/* ----- Menu -----*/
+
+.menu {
 	width: 100%;
+	height: 12vh;
 }
 
-.logo img {
-	width: auto;
+.menu img {
 	height: auto;
+	width: 100%;
+	vertical-align: middle;
 }
 
-.item a {
+.imgMenuResponsive {
+	display: none;
+}
+
+.menu ul {
+	list-style-type: none;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	line-height: 12vh;
+}
+
+.menu a {
+	display: block;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 1.5em;
+	color: #ff1864;
 }
 
-#destaque {
+.menu a:visited{
+	color: #ff1864;
+}
+
+label[for="bt_menu"]{
+	display: none;
+	line-height: 6vh;
+	text-align: center;
+	font-size: 2.5em;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+
+#bt_menu {
+	display: none;
+}
+
+/* ----- Destaque (Highlight) -----*/
+
+#highlight {
 	height: 88vh;
 	width: 100%;
-	background: #FF0;
+	background: url("../imagens/destaque.png") no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 } 
 
-.destaque {
+.highlight {
 	text-align: center;
 	width: 60%;
+	color: #fff;
 }
 
-.tituloDestaque {
+.highlightTitle {
 	font-weight: bold;
 	font-size: 6.0em;
 }
 
-.textoDestaque {
+.highlightText {
 	font-size: 1.5em;
 }
+
+/* ----- RoboCup -----*/
 
 #robocup {
 	height: 100vh;
 	width: 100%;
-	background: #0ff;
+	background: #Fff;
 }
 
-.titulo {
+.title {
 	height: 10vh;
 	font-size: 6.0em;
 	flex-basis: 20%;
 	padding-top: 5vh;
-}
-
-.textoRobo {
-	flex-basis: 40%;
 	text-align: center;
-	justify-content: space-between;
-	height: 70vh;
-	font-size: 1.2em;
 }
 
-.textoRobo img {
-	width: 215px;
-	height: 123px;
+.height60 {
+	height: 60vh;
 }
 
-.video{
+.video {
 	flex-basis: 40%;
+	max-width: 100%;
+	max-height: 295px;
 	text-align: center;
-	/*border: 5px solid #ff4873;
-	border-radius: 5px;*/
+	border: 5px solid #ff4873;
+	border-radius: 5px;
 }
 
-#etapas {
-	height: 100vh;
+.textShadow {
+	text-shadow: 0px 2px 5px #000;
+	-moz-text-shadow: 0px 2px 5px #000;
+	-webkit-text-shadow: 0px 2px 5px #000;
+	-o-text-shadow: 0px 2px 5px #000;
+}
+/* ----- Creation ----- */
+
+#creation {
+	height: 200vh;
 	width: 100%;
-	background: #f0f;
+	background: #f9f9f9;
 }
 
-#galeria {
-	height: 100vh;
-	width: 100%;
-	background: #eee;
+.titleCreation {
+	height: 10vh;
+	font-size: 6.0em;
+	flex-basis: 20%;
+	text-align: center;
 }
 
-#jogo {
-	height: 100vh;
-	width: 100%;
-	background: #aaa;
-}
-
-.texto {
-	flex-basis: 80%;
-    flex-wrap: wrap;
+.creationText {
+	flex-basis: 60%;
+    flex-wrap: nowrap; /* --- alterar posteriormente por questões de responsividade --- */
     justify-content: space-around;
     align-items: center;
     width: 100%;
     font-size: 1.2em;
 }
 
-.texto div {
+.creationText div {
 	flex-basis: 45%;
     text-align: center;
 }
 
-.texto div img {
-	width: 540px;
-	height: 295px;
+.creationText div h1{
+	font-size: 3.0em;
+}
+
+
+.creationText div img {
+	width: 100%;
+    max-height: 295px;
 	border: 5px solid #ff4873;
 	border-radius: 5px;
 }
 
-.botaoGame {
+/* ----- Gallery -----*/
+
+#gallery {
+	height: 100vh;
+	width: 100%;
+	background: #eee;
+}
+
+#carousel, #carousel > div {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #455A64;
+    overflow: hidden;
+}
+
+#carousel > div {
+    position: absolute;
+}
+
+#carousel > i {
+    color: #fff;
+    position: absolute;
+    font-size: 60px;
+    margin: 20px;
+    top: 40%;
+    cursor: pointer;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+#carousel > #left {
+    left: 0px;
+}
+
+#carousel > #right {
+    right: 0px;
+}
+
+#carousel:hover > #left {
+    left: 0;
+}
+
+#carousel:hover > #right {
+    right: 0;
+}
+
+#carousel > i:active {
+    color: #fff;
+    -moz-transform: translate(0,5px);
+    -ms-transform: translate(0,5px);
+    -o-transform: translate(0,5px);
+    -webkit-transform: translate(0,5px);
+    transform: translate(0,5px);
+    cursor: pointer;
+}
+
+#carousel > ul {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    padding: 0;
+    margin: 0;
+}
+
+#carousel > ul > li {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    list-style: none;
+    float: left;
+    background-color: none;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0px 5px 5px #000;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+#carousel > ul > li.showli {
+    background-color: #fff;
+    border: 5px solid white;
+}
+
+#carousel > ul > li:hover {
+    background-color: #fff;
+    border: 5px solid white;
+}
+
+#carousel > div.show {
+    z-index: 1;
+}
+
+.white-left-arrow{
+	position:relative;
+	top:1px;
+	display:inline-block;
+	-webkit-font-smoothing:antialiased;
+	background-image: url("../imagens/setaBrancaEsq.png");
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 55px;
+	z-index: 5;
+	filter: drop-shadow(0px 5px 5px #000);
+}
+	
+.white-right-arrow{
+	position:relative;
+	top:1px;
+	display:inline-block;
+	-webkit-font-smoothing:antialiased;
+	background-image: url("../imagens/setaBrancaDir.png");
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 55px;
+	z-index: 5;
+	filter: drop-shadow(0px 5px 5px #000);
+}
+
+
+/* ----- Game ----- */
+
+#game {
+	height: 100vh;
+	width: 100%;
+	background: #f9f9f9;
+}
+
+.height50 {
+	height: 50vh;
+}
+
+.text {
+	flex-basis: 80%;
+    flex-wrap: nowrap; /* --- alterar posteriormente por questões de responsividade --- */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.text div {
+	flex-basis: 45%;
+    text-align: center;
+}
+
+.text div img {
+	max-width: 273px;
+	max-height: 83px;
+	border: none;
+}
+
+.textGame {
+	flex-basis: 80%;
+    flex-wrap: nowrap; /* --- alterar posteriormente por questões de responsividade --- */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.textGame div {
+	flex-basis: 45%;
+    text-align: center;
+}
+
+.textGame div img {
+	width: 100%;
+	max-height: 295px;
+	border: 5px solid #ff4873;
+	border-radius: 5px;
+}
+
+.gameButton {
 	width: 243px;
 	height: 48px;
 	color: #FFF;
@@ -129,9 +362,10 @@ body {
 	border: 5px solid #ff4873;
 	border-radius: 10px;
 	cursor: pointer;
+	box-shadow: 0px 5px 15px #000;
 }
 
-.botaoGame:hover {
+.gameButton:hover {
 	color: #ff4873;
 	font-size: 1.1em;
 	background-color: #fff;
@@ -139,13 +373,107 @@ body {
 	border-radius: 10px;
 }
 
-#time {
+/* ----- Team ----- */
+
+#team {
 	height: 88vh;
 	width: 100%;
-	background: #bbb;
+	background: #fff;
 }
 
-.textoTime {
+.titleTeam {
+	height: 10vh;
+	font-size: 6.0em;
+	flex-basis: 20%;
+	padding-top: 5vh;
+	text-align: center;
+}
+
+#carousel2, #carousel2 > div {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;	
+}
+
+#carousel2 > div {
+    position: absolute;
+    top: 20%;
+}
+
+#carousel2 > i {
+    color: #fff;
+    position: absolute;
+    font-size: 60px;
+    margin: 20px;
+    top: 40%;
+    cursor: pointer;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+#carousel2 > #left {
+    left: 0px;
+}
+
+#carousel2 > #right {
+    right: 0px;
+}
+
+#carousel2:hover > #left {
+    left:0;
+}
+
+#carousel2:hover > #right {
+    right: 0;
+}
+
+#carousel2 > i:active {
+    color: #fff;
+    -moz-transform: translate(0,5px);
+    -ms-transform: translate(0,5px);
+    -o-transform: translate(0,5px);
+    -webkit-transform: translate(0,5px);
+    transform: translate(0,5px);
+    cursor: pointer;
+}
+
+#carousel2 > div.show {
+    z-index: 3;
+}
+
+.left-arrow {
+	position:relative;
+	top:1px;
+	display:inline-block;
+	-webkit-font-smoothing:antialiased;
+	background-image: url("../imagens/setaTimeEsq.png");
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 55px;
+	z-index: 5;
+	filter: drop-shadow(0px 2px 5px #000);
+}
+	
+.right-arrow{
+	position:relative;
+	top:1px;
+	display:inline-block;
+	-webkit-font-smoothing:antialiased;
+	background-image: url("../imagens/setaTimeDir.png");
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 55px;
+	z-index: 5;
+	filter: drop-shadow(0px 2px 5px #000);
+}
+
+.teamText {
 	flex-basis: 80%;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -154,54 +482,62 @@ body {
     font-size: 1.2em;
 }
 
-.textoTime p {
+.teamText p {
 	text-align: left;
 }
 
-.textoTime h1 {
+.teamText h1 {
 	text-align: left;
 	font-size: 3.0em;
 	width: 100%;
 }
 
-.textoTime div {
+.teamText div {
 	flex-basis: 45%;
     text-align: center;
 }
 
-.textoTime div img {
+.teamText div img {
 	width: 300px;
 	height: 300px;
 	border: 5px solid #ff4873;
 	border-radius: 50%;
+	box-shadow: -4px 5px 15px #000;
+	-moz-box-shadow: -4px 5px 15px #000;
+	-webkit-box-shadow: -4px 5px 15px #000;
+	-o-box-shadow: -4px 5px 15px #000;
 }
 
-.foto {
+.photo {
 	padding-left: 100px;
 }
 
-.descricao {
+.description {
 	height: 50vh;
 	justify-content: center;
 	padding-right: 100px;
 }
 
-#rodape {
+/* ----- Rodapé (Footer) ----- */
+
+#footer {
 	height: 12vh;
 	width: 100%;
 	font-size: 0.9em;	
 }
 
+/* ----- FLEXBOX -----*/
+
 .container {
 	display: flex;
 }
 
-.centralizar {
+.center {
 	justify-content: space-around;
 	align-items: center;
 }
 
-.coluna {
+.column {
 	flex-direction: column;
 }
 
@@ -209,147 +545,244 @@ body {
 	flex-wrap: wrap;
 }
 
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
 
-.fullHeight {
-    height: 100vh;
-  }
+/* ----- RESPONSIVIDADE ----- */
 
-/* -------- carousel ------- */
+@media only screen and (max-width: 1000px) {
 
+	label[for="bt_menu"]{
+		display: block;
+		height: 6vh;
+		margin-left: 5px;
+	}
+
+	#bt_menu:checked ~ .menu{
+		margin-left: 0;
+	}
+	
+	.imgMenuResponsive {
+		display: block;
+		position: absolute;
+		top: 1.2vh;
+		max-width: 100%;
+		max-height: 4.5vh;
+	}
+
+	.menu {
+		margin-top: 5px;
+		margin-left: -100%;
+		transition: all .5s;
+		width: 100%;
+		height: 0;
+	}
+		
+	.menu ul {
+		list-style: none;
+		position: relative;
+		display: block;
+	}
+
+	.menu ul li:first-child {
+		border-top: 2px solid #ff1864;
+	}
+
+	.menu ul li{
+		width: 100%;
+		float: none;
+		border-bottom: 2px solid #ff1864;
+	}
+
+	.menu a {
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		background-color: #fff;
+	}
+
+	.menuImg {
+		display: none;
+	}
+
+	#highlight {
+		height: 94vh;
+	}
+}
+
+@media only screen and (orientation: portrait) and (max-width: 800px){
    
-#carousel, #carousel > div {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-color: #455A64;
-    overflow: hidden;
+	/* ----- ROBOCUP ----- */
+   	.direction {
+		flex-direction: column;
+	}
+
+	.reverseDirection {
+		flex-direction: column-reverse;
+	}
+
+	.title {
+		flex-basis: 15%;
+	}
+
+	.text div {
+   		flex-basis: 55%;
+	    text-align: center;
+	}
+
+	.text div p {
+		width: 80%;
+		font-size: 1.3em;
+	}
+
+	/* ----- CREATION ----- */
+
+	.creationText {
+    	flex-basis: 55%;
+	}
+
+	.creationText div p{
+    	width: 80%;
+    	font-size: 1.3em;
+	}
+
+	.creationText div img {
+	    width: 516px;
+	    max-width: 100%;
+	    max-height: 295px;
+	    border: 5px solid #ff4873;
+	    border-radius: 5px;
+	}
+
+	/* ----- GAME ----- */
+
+	.textGame div {
+		flex-basis: 100%;
+		text-align: center;
+	}
+
+	.textGame div p {
+		width: 80%;
+		font-size: 1.3em;
+	}
+				
+	.textGame div img {
+		max-width: 540px;
+	}
+
+	.gameButton:hover {
+		width: 243px;
+		height: 48px;
+		color: #FFF;
+		font-size: 1.1em;
+		background-color: #ff4873;
+		border: 5px solid #ff4873;
+		border-radius: 10px;
+		cursor: pointer;
+		box-shadow: 0px 5px 15px #000;
+	}
+	
+	/* ----- TEAM ----- */
+
+	.titleTeam {
+		flex-basis: 10%;
+	}
+
+	.photo {
+		padding-left: 0;
+	}
+
+	.description {
+		padding-right: 0;
+		padding-top: 2vh;
+		justify-content: flex-start;
+		
+	}
+
+	.teamText h1 {
+    	text-align: center;
+    	font-size: 3.0em;
+    	width: 100%;
+	}
+
+	.teamText p {
+    	text-align: center;
+    	width: 80%;
+    	font-size: 1.3em;
+	}
+
+	.teamText div img{
+		width: 400px;
+		height: 400px;
+	}
 
 }
 
-    #carousel > div {
-        position: absolute;
-    }
+@media only screen and (orientation: landscape) and (max-width: 1000px){
 
-    #carousel > i {
-        color: #fff;
-        position: absolute;
-        font-size: 60px;
-        margin: 20px;
-        top: 40%;
-        cursor: pointer;
-        -moz-transition: .2s;
-        -o-transition: .2s;
-        -webkit-transition: .2s;
-        transition: .2s;
-    }
-
-    #carousel > #left {
-        left: -100px;
-    }
-
-    #carousel > #right {
-        right: -100px;
-    }
-
-    #carousel:hover > #left {
-        left:0;
-    }
-
-    #carousel:hover > #right {
-        right: 0;
-    }
-
-    #carousel > i:active {
-        color: #fff;
-        -moz-transform: translate(0,5px);
-        -ms-transform: translate(0,5px);
-        -o-transform: translate(0,5px);
-        -webkit-transform: translate(0,5px);
-        transform: translate(0,5px);
-        cursor: pointer;
-    }
-
-    #carousel > ul {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 4;
-        padding: 0;
-        margin: 0;
-    }
-
-        #carousel > ul > li {
-            margin: 0;
-            padding: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            list-style: none;
-            float: left;
-            background-color: none;
-            margin-right: 20px;
-            cursor: pointer;
-            border: 2px solid #fff;
-            -moz-transition: .3s;
-            -o-transition: .3s;
-            -webkit-transition: .3s;
-            transition: .3s;
-        }
-
-            #carousel > ul > li.showli {
-                background-color: #fff;
-                border: 5px solid white;
-                                
-            }
-
-            #carousel > ul > li:hover {
-                background-color: #fff;
-                border: 5px solid white;
-            }
-
-    #carousel > div.show {
-        z-index: 1;
+	label[for="bt_menu"] {
+	    font-size: 1.5em;
 	}
+
+	.video {
+	    max-height: 200px;
+	}
+
+	.title {
+	    padding-top: 0;
+		font-size: 5.0em;
+	}
+
+	.text {
+		font-size: 1.0em;
+	}
+
+	.text div img {
+        max-height: 50px;
+	}
+
+	/* ----- CREATION ----- */
+
+	.titleCreation {
+	    height: 10vh;
+	    font-size: 5.0em;
+	    flex-basis: 30%;
+	    text-align: center;
+	}
+
+	.creationText div img {
+	    width: 100%;
+	    max-height: 200px;
+	    border: 5px solid #ff4873;
+	    border-radius: 5px;
+	}
+
+	.creationText {
+	    font-size: 1.0em;
+	}
+
+	.textGame {
+		font-size: 1.0em;
+	}
+
+	/* ----- TEAM ----- */
 	
+	.titleTeam {
+		padding-top: 0;
+		font-size: 5.0em;
+	}
 
-	.glyphicon-left{
-		position:relative;
-		top:1px;
-		display:inline-block;
-		-webkit-font-smoothing:antialiased;
-	
-		background-image: url(/imagens/setaBrancaEsq.png);
-		background-repeat: no-repeat;
-		width: 30px;
-		height: 55px;
-		z-index: 5;
-		}
-	
-		.glyphicon-right{
-			position:relative;
-			top:1px;
-			display:inline-block;
-			-webkit-font-smoothing:antialiased;
-		
-			background-image: url(/imagens/setaBrancaDir.png);
-			background-repeat: no-repeat;
-			width: 30px;
-			height: 55px;
-			z-index: 5;
-			}
+	.teamText h1 {
+		font-size: 2.5em;
+	}
 
+	.teamText p {
+    	text-align: left;
+    	width: 100%;
+    	font-size: 0.8em;
+	}
 
+	.teamText div img{
+		width: 200px;
+		height: 200px;
+	}
 
-
-
+}
