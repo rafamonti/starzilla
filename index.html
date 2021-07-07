@@ -3,90 +3,168 @@
 <head>
 	<title>Starzilla</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=800">
+	<title>Starzilla|Ohana Team</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="icon" type="imagem/png" href="imagens/iconStarzilla.png">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="javascript/script.js"></script>
-</head>
+	<script src="javascript/prefixfree.min.js"></script>
+	<script src='javascript/jquery.min.js'></script>
+ 	<script src="javascript/script.js"></script>
+ </head>
 <body> 
 	<!-- Menu -->
-	<div id="menu" class="container centralizar">
-		<div class="item"><a href="index.html">Início</a></div>
-		<div class="item"><a href="#robocup">RoboCup</a></div>
-		<div class="item"><a href="#etapas">Etapas</a></div>
-		<div class="logo"><a href="index.html"><img src="imagens/logoStarzilla.png" alt="Starzilla"></a></div>
-		<div class="item"><a href="#galeria">Galeria</a></div>
-		<div class="item"><a href="#jogo">Game</a></div>
-		<div class="item"><a href="#time">Time</a></div>
+	<input type="checkbox" id="bt_menu">
+	<label for="bt_menu">&#9776;</label>
+	<div class="container center" style="">
+		<img src="imagens/logoStarzilla.png" class="imgMenuResponsive">
 	</div>
-	<!-- Destaque -->
-	<div id="destaque" class="container centralizar coluna">
-		<div class="destaque">
-			<div class="tituloDestaque"><b style="font-size: 1.2em;">S</b>tarzilla</div>
-			<div class="textoDestaque">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra, nibh vel mattis lobortis, nunc dui convallis ipsum, accumsan cursus tellus sapien eget turpis.</div>
+	<nav class="menu">
+		<ul>
+			<li><a href="#">INÍCIO</a></li>
+			<li><a href="#robocup">ROBOCUP</a></li>
+			<li><a href="#creation">CRIAÇÃO</a></li>
+			<li class="menuImg"><a href="#"><img src="imagens/logoStarzilla.png"></a></li>
+			<li><a href="#gallery">GALERIA</a></li>	
+			<li><a href="#game">JOGO</a></li>
+			<li><a href="#team">TIME</a></li>
+			<li><a href="login.html">LOGIN</a></li>
+		</ul>
+	</nav>
+	<!-- Destaque ( Highlight ) -->
+	<div id="highlight" class="container center column">
+		<div class="highlight">
+			<div class="highlightTitle textShadow"><b style="font-size: 1.2em;">S</b>tarzilla</div>
+			<div class="highlightText textShadow">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra, nibh vel mattis lobortis, nunc dui convallis ipsum, accumsan cursus tellus sapien eget turpis.</div>
 		</div>
 	</div>
 	<!-- RoboCup -->
-	<div id="robocup" class="container centralizar">
-		<div class="container textoRobo coluna">
-			<img src="imagens/logoRoboCup.png" alt="RoboCup" title="RoboCup"/>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra, nibh vel mattis lobortis, nunc dui convallis ipsum, accumsan cursus tellus sapien eget turpis.</p>
-			<p>Praesent eu mi viverra, aliquam mauris eget, tincidunt lorem. Ut accumsan, est nec vestibulum lobortis,  </p>
-			<p>Veja mais em: <a href="https://bit.ly/2vCV0In">https://bit.ly/2vCV0In</a></p>
-		</div>
-		<div class="video">
-			<iframe src="https://www.youtube.com/embed/fKmZ7e1Ptvw" width="540px" height="295px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<div id="robocup" class="container column">
+		<div class="title center textShadow">ROBOCUP</div>
+		<div class="container text direction">
+			<div class="container column center height60">
+				<p>O RoboCup é uma competição da FIAP. Alunos do 1° ano de Sistemas de Informação constroem robôs para lutar, onde o principal objetivo é estourar o balão do adversário.</p>
+				<img src="imagens/next.png" alt="next" title="Next" class="next" />
+				<p>Os melhores robôs competem no Next, o festival de tecnologia e inovação da FIAP.</p>
+				<p><a target="_blank" href="https://www.fiap.com.br/next/" style="color: #912c36; text-decoration: none; cursor: pointer; font-weight: bold;">Clique aqui e saiba mais!</a></p>
+			</div>
+			<video class="video" controls><source src="videos/next.mp4" type="video/mp4"></video>
 		</div>
 	</div>
-	<!-- Etapas -->
-	<div id="etapas" class="container centralizar">
-		ETAPAS
-	</div>
-	<!-- Galeria -->
-	<div id="galeria">
-		<div id="carousel">
-			<div class="show" style="background-image:url(http://www.lirent.net/wp-content/uploads/2014/10/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png)"></div>
-			<div style="background-image:url(http://www.lirent.net/wp-content/uploads/2014/10/Android-Lollipop-wallpapers-Wall1.png)"></div>
-			<div style="background-image:url(https://lh4.googleusercontent.com/-c2kWlW-DE9A/VMSgQjCdffI/AAAAAAAADy4/tB__iZ25nxQ/w1080-h600/atardecer8.png)"></div>
-			<div style="background-image:url(http://papers.co/wallpaper/papers.co-ag01-toronto-material-design-illust-art-25-wallpaper.jpg)"></div>
-	
-			<i id="left" class="glyphicon-left" style="z-index:2; position:absolute;"></i>
-			<i id="right" class="glyphicon-right" style="z-index:2; position:absolute;"></i>
-	
-			<ul>
-					<li class="showli"></li>
-					<li></li>
-					<li></li>
-					<li></li>
-			</ul>
+	<!-- Criação do robo -->
+	<div id="creation" class="container column">
+		<div class="titleCreation center textShadow">CRIAÇÃO DO ROBO</div>
+		<div class="container creationText reverseDirection">
+			<div><img src="imagens/base.png" alt="base" title="BASE DO ROBO"></div>
+			<div class="container column center" style="height: 40vh;">
+				<h1>Base</h1>
+				<p>A base é constituida de uma chapa de acrílico preto leitoso.</p>
+				<p>Para a movimentação do robô utilizou-se um arduino Uno, um Shield de motor L293D, um Shield de Bluetooth HC6 e dois motores de 5V / 330 RPM.</p>
+			</div>	
+		</div>	
+		<div class="container creationText direction">
+				<div class="container column center" style="height: 35vh;">
+					<h1>Armas</h1>
+					<p>A arma é constituída de duas varas resistentes, posicionadas uma em cada lado do robô. Possuindo na ponta uma esfera de isopor revestida de estiletes, oferecendo um maior raio de eficiência para o ataque.</p>
+				</div>	
+				<div><img src="imagens/armas.jpg" alt="armas" title="ARMAS"></div>
+			</div>
+			<div class="container creationText reverseDirection">
+				<div><video class="video" controls><source src="videos/design.mp4" type="video/mp4"></video></div>
+				<div class="container column center" style="height: 30vh;">
+					<h1>Design</h1>
+					<p>O design constitui de uma pintura em vinho fosco, na frente uma boca feroz e do lados a chama representa a velocidade e maldade do robô.</p>
+				</div>				
 			</div>
 	</div>
+	<!-- Galeria -->
+	<div id="gallery">
+		<div id="carousel">
+			<div class="show" style="background-image:url(imagens/img1.jpg)"></div>
+			<div style="background-image:url(imagens/img2.png)"></div>
+			<div style="background-image:url(imagens/img3.png)"></div>
+			<div style="background-image:url(imagens/img4.jpg)"></div>
+			<div style="background-image:url(imagens/img5.png)"></div>
+			<div style="background-image:url(imagens/img6.png)"></div>
+			<div style="background-image:url(imagens/img7.png)"></div>
+			<div style="background-image:url(imagens/img8.jpg)"></div>
+			<div><video style="width: 100%;" controls><source src="videos/luta1.mp4" type="video/mp4"></div>
+					
+	
+			<i id="left" class="white-left-arrow" style="z-index:2; position:absolute;"></i>
+			<i id="right" class="white-right-arrow" style="z-index:2; position:absolute;"></i>
+	
+			<ul>
+				<li class="showli"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
 	<!-- Jogo -->
-	<div id="jogo" class="container coluna">
-		<div class="titulo centralizar">GAME</div>
-		<div class="container texto">
-			<div class="container coluna centralizar" style="height: 50vh;">
+	<div id="game" class="container column">
+		<div class="title center textShadow">JOGO</div>
+		<div class="container textGame wrap">
+			<div class="container column center height50">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra, nibh vel mattis lobortis, nunc dui convallis ipsum, accumsan cursus tellus sapien eget turpis.</p>
 				<p>Praesent eu mi viverra, aliquam mauris eget, tincidunt lorem. Ut accumsan, est nec vestibulum lobortis.</p>
-				<a href="#" target="_blank"><input type="button" name="jogar" value="QUERO JOGAR !" class="botaoGame"></a>
+				<a href="#" target="_blank"><input type="button" name="play" value="QUERO JOGAR !" class="gameButton"></a>
 			</div>
 			<div><img src="imagens/game.jpg" alt="game" title="Game"></div>
 		</div>
 	</div>
 	<!-- Time -->
-	<div id="time" class="container coluna">
-		<div class="titulo centralizar">TIME</div>
-		<div class="container textoTime">
-			<div class="foto"><img src="imagens/goku.png" alt="game" title="Game"></div>
-			<div class="container coluna descricao">
-				<h1>GOKU</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed viverra mauris, a rhoncus eros. Praesent facilisis placerat mi quis semper. Nullam aliquam iaculis imperdiet.</p>
-			</div>
-			
+	<div id="team" class="container column">
+		<div class="titleTeam center textShadow">TIME</div>
+		<!-- SLIDER -->
+		<div id="carousel2">
+			<div class="show">
+		    	<div class="container teamText direction">
+					<div class="photo"><img src="imagens/carol.png" alt="carol" title="Carol"></div>
+					<div class="container column description">
+						<h1>CAROL</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed viverra mauris, a rhoncus eros. Praesent facilisis placerat mi quis semper. Nullam aliquam iaculis imperdiet.</p>
+					</div>			
+				</div>
+		    </div>
+		    <div>		    	
+				<div class="container teamText direction">
+					<div class="photo"><img src="imagens/keny.png" alt="keny" title="Keny"></div>
+					<div class="container column description">
+						<h1>KENY</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed viverra mauris, a rhoncus eros. Praesent facilisis placerat mi quis semper. Nullam aliquam iaculis imperdiet.</p>
+					</div>			
+				</div>
+		    </div>
+		    <div>
+		    	<div class="container teamText direction">
+					<div class="photo"><img src="imagens/rafael.png" alt="rafael" title="Rafael"></div>
+					<div class="container column description">
+						<h1>RAFA</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed viverra mauris, a rhoncus eros. Praesent facilisis placerat mi quis semper. Nullam aliquam iaculis imperdiet.</p>
+					</div>			
+				</div>
+		    </div>
+		    <div>
+		    	<div class="container teamText direction">
+					<div class="photo"><img src="imagens/vinicius.png" alt="vinicius" title="Vinícius"></div>
+					<div class="container column description">
+						<h1>VINI</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed viverra mauris, a rhoncus eros. Praesent facilisis placerat mi quis semper. Nullam aliquam iaculis imperdiet.</p>
+					</div>			
+				</div>
+		    </div>
+
+		    <i id="left" class="left-arrow" style="z-index:4; position:absolute;"></i>
+		    <i id="right" class="right-arrow" style="z-index:4; position:absolute;"></i>
 		</div>
 	</div>
 	<!-- Rodapé -->
-	<div id="rodape" class="container centralizar">&copy; 2018 Ohana - Todos os direitos reservados </div>
+	<div id="footer" class="container center">&copy; 2018 Ohana - Todos os direitos reservados</div>
 </body>
 </html>
